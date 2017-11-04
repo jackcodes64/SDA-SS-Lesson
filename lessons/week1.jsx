@@ -108,7 +108,7 @@ const Week1 = ()=>{
                     </Text>
 
                     <Text style={{margin: 10}}>
-                        <Text style={[styles.tbold, isDark?{color: "#022a05"}:{color: "red"}]}>Read </Text>
+                        <Text style={[{fontWeight: "bold", fontSize: 20}, isDark?{color: "#022a05"}:{color: "red"}]}>Read </Text>
                         <Text style={{fontStyle: "italic", fontSize: 18, fontWeight: "bold"}}>
                             1 Corinthians 1:1 and Romans 1:1. What two elements of Paul’s
                             ministry are emphasized in these passages? (See also Gal. 1:1.)
@@ -460,7 +460,7 @@ const Week1 = ()=>{
 
                 <View style={{margin: 10}}>
                     <View style={{flexDirection: "row", gap: 30}}>
-                        <Text style={[isDark? styles.topBox : styles.topBoxLight,font=="medium"?{fontSize: 24}:(font=="large"?{fontSize: 26}:{fontSize: 22}) ]}>F riday </Text>
+                        <Text style={[isDark? styles.topBox : styles.topBoxLight,font=="medium"?{fontSize: 24}:(font=="large"?{fontSize: 26}:{fontSize: 22}) ]}>Friday </Text>
                         <Text style={{paddingTop: 40, fontSize: 17}}> July 3</Text>
                     </View>
 

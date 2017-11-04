@@ -116,7 +116,7 @@ const Week1 = ()=>{
                     </Text>
 
                     <Text style={{margin: 10}}>
-                        <Text style={{fontWeight: "bold", fontSize: 20, color:"red"}}>Read </Text>
+                        <Text style={[{paddingTop: 40}, font=="medium"?{fontSize: 17}:(font=="large"?{fontSize: 19}:{fontSize: 15})]}>Read </Text>
                         <Text style={{fontStyle: "italic", fontSize: 18, fontWeight: "bold"}}>
                             1 Corinthians 8:1–13. Why does Paul contrast knowledge with
                             love, and what is the context here? What point is he making?

@@ -150,7 +150,7 @@ const Week13 = ()=>{
                      <Text style={{margin: 10}}>
                         <Text style={[{fontWeight: "bold", fontSize: 20}, isDark?{color: "#022a05"}:{color: "red"}]}>Read </Text>
                         <Text style={{fontStyle: "italic", fontSize: 18,fontWeight: "bold" }}>
-                            2Romans 16:20, Galatians 6:18, Philippians 4:23, and 1 Thessalonians
+                            Romans 16:20, Galatians 6:18, Philippians 4:23, and 1 Thessalonians
                             5:28. What important teaching do you see in these passages?
                         </Text>
                     </Text>

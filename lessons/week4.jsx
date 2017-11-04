@@ -126,8 +126,9 @@ lessons can we take from what he wrote?
                     </Text>
 
                     <Text style={{margin: 10}}>
-                        <Text style={{fontWeight: "bold", fontSize: 20, color:"red"}}>Read </Text>
-                        <Text style={{fontStyle: "italic", fontSize: 18, fontWeight: "bold"}}>
+                       
+                        <Text  style={[{paddingTop: 40}, font=="medium"?{fontSize: 17}:(font=="large"?{fontSize: 19}:{fontSize: 15})]}>
+                            <Text style={[{fontWeight: "bold", fontSize: 20}, isDark?{color: "#022a05"}:{color: "red"}]}>Read </Text>
                             1 Corinthians 5:1–13. What scandalous situation does Paul
                             describe in this passage, and why is it so disturbing?
                         </Text>
@@ -509,7 +510,7 @@ lessons can we take from what he wrote?
 
                 <View style={{margin: 10}}>
                     <View style={{flexDirection: "row", gap: 30}}>
-                        <Text style={[isDark? styles.topBox : styles.topBoxLight,font=="medium"?{fontSize: 24}:(font=="large"?{fontSize: 26}:{fontSize: 22}) ]}>F riday </Text>
+                        <Text style={[isDark? styles.topBox : styles.topBoxLight,font=="medium"?{fontSize: 24}:(font=="large"?{fontSize: 26}:{fontSize: 22}) ]}>Friday </Text>
                         <Text style={{paddingTop: 40, fontSize: 17}}> July 24</Text>
                     </View>
 
