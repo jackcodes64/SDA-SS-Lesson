@@ -34,10 +34,10 @@ const Week9 = ()=>{
 
                     <Text style={[{fontStyle: "italic"}, font=="medium"?{fontSize: 30}:(font=="large"?{fontSize: 32}:{fontSize: 28})]}>
                         Love-driven Ministry
-                    </Text>
+                    </Text> 
 
                     <View style={{overflow: "hidden", marginTop:10, maxHeight: 120, width: "100%"}}>
-                        <Image source={images.lesson4} resizeMode="contain" style={{maxWidth: 370, maxHeight: 134, width: "100%"}}/>
+                        <Image source={images.lesson9} resizeMode="contain" style={{maxWidth: 370, maxHeight: 134, width: "100%"}}/>
                     </View>
                     
                     <View style={[{height: 4, marginTop: 5}, isDark?{backgroundColor: "#022a05"}:{backgroundColor: "red"}]}></View>
