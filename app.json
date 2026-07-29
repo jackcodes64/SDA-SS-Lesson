@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "SDA SS Lesson",
+    "slug": "sdass_lesson",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/sda_logo.png",
+    "scheme": "sdasslesson",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "icon": "./assets/images/sda_logo.png",
+      "bundleIdentifier": "com.anonymous.sdass-Lesson",
+      "buildNumber": "1"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff",
+        "foregroundImage": "./assets/images/sda.jpg",
+        "backgroundImage": "./assets/images/sda_logo.png",
+        "monochromeImage": "./assets/images/sda_logo.png"
+      },
+      "versionCode": 1,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.jackokebe.sdass_lesson"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#208AEF",
+          "android": {
+            "image": "./assets/images/sda_logo.png",
+            "imageWidth": 76
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "73323023-8dbd-4f7b-8b9e-0e6bc6cbd265"
+      }
+    }
+  }
+}
