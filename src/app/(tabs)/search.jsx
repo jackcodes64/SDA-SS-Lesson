@@ -20,7 +20,6 @@ const Search = ()=>{
   const [matches, setMatches] = useState([{key: 404, topic: "Type on the bar above to search", }]);
   const [week, setWeek] = useContext(SearchContext);
   const router = useRouter()
-  //const debounceRef = useRef(null);
 
   function changeFontSize (){ //gen
     if(font=="medium"){
@@ -35,67 +34,189 @@ const Search = ()=>{
   const book = [
     {
       key: 1,
-      topic: "Awakened",
-      date: "June 6",
-      page: 19,
+      topic: "Paul's Ministry in Corinth",
+      date: "June 27",
+      page: 5,
+      day: "Saturday",
+      week: "week1"
+    },
+    {
+      key: 2,
+      topic: "Paul, a God-called Apostle of Jesus",
+      date: "June 28",
+      page: 6,
+      day: "Sunday",
+      week: "week1"
+    },
+    {
+      key: 3,
+      topic: "From Athens to Corinth",
+      date: "June 29",
+      page: 7,
       day: "Monday",
       week: "week1"
     },
-    { 
-      key: 2,
-      topic: "Awakened",
-      date: "June 6",
+    {
+      key: 4,
+      topic: "The City of Corinth",
+      date: "June 30",
+      page: 8,
+      day: "Tuesday",
+      week: "week1"
+    },
+    {
+      key: 5,
+      topic: "“Many in This City”",
+      date: "June 31",
+      page: 9,
+      day: "Wedneday",
+      week: "week1"
+    },
+    {
+      key: 6,
+      topic: "Paul’s Letters to the Corinthians",
+      date: "June 27",
+      page: 10,
+      day: "Thursday",
+      week: "week1"
+    },
+    {
+      key: 7,
+      topic: "The Message of the Cross",
+      date: "July 4",
+      page: 18,
+      day: "Saturday",
+      week: "week2"
+    },
+    {
+      key: 8,
+      topic: "The Gospel of the Cross",
+      date: "July 5",
+      page: 19,
+      day: "Sunday",
+      week: "week2"
+    },
+    {
+      key: 9,
+      topic: "Foolishness to Those Who Are Perishing",
+      date: "July 6",
       page: 20,
       day: "Monday",
       week: "week2"
     },
-    { key: 3,
-      topic: "Awakened",
-      date: "June 6",
-      page: 41,
+    {
+      key: 9,
+      topic: "Power to Those Who Are Being Saved",
+      date: "July 7",
+      page: 21,
+      day: "Tuesday",
+      week: "week2"
+    },
+    {
+      key: 10,
+      topic: "A Messiah Crucified",
+      date: "July 8",
+      page: 22,
+      day: "Wednesday",
+      week: "week2"
+    },
+    {
+      key: 11,
+      topic: "Christ, the Power and Wisdom of God",
+      date: "July 9",
+      page: 23,
+      day: "Thursday",
+      week: "week2"
+    },
+    {
+      key: 12,
+      topic: "Unity in Christ",
+      date: "July 11",
+      page: 31,
+      day: "Saturday",
+      week: "week3"
+    },
+    {
+      key: 13,
+      topic: "Paul's Ministry in Corinth",
+      date: "July 12",
+      page: 32,
+      day: "Sunday",
+      week: "week3"
+    },
+    {
+      key: 14,
+      topic: "Paul's Ministry in Corinth",
+      date: "July 13",
+      page: 33,
       day: "Monday",
       week: "week3"
     },
     {
-      key: 4,
-      topic: "kened",
-      date: "June 6",
-      page: 42,
-      day: "Monday",
-      week: "week4"
+      key: 15,
+      topic: "Paul's Ministry in Corinth",
+      date: "July 14",
+      page: 19,
+      day: "Tuesday",
+      week: "week3"
     },
     {
-      key: 5,
-      topic: "Awakened",
-      date: "June 6",
-      page: 49,
-      day: "Monday",
-      week: "week5"
+      key: 16,
+      topic: "Paul's Ministry in Corinth",
+      date: "July 15",
+      page: 22,
+      day: "Wednesday",
+      week: "week3"
     },
     {
-      key: 6,
-      topic: "No titles match the search",
-      date: "June 6",
-      page: 40,
-      day: "Monday",
-      week: "week6"
+      key: 17,
+      topic: "Paul's Ministry in Corinth",
+      date: "July 16",
+      page: 23,
+      day: "Thursday",
+      week: "week3"
     },
     {
-      key: 7,
-      topic: "Awakened, No titles match the search too",
-      date: "June 6",
-      page: 51,
-      day: "Monday",
-      week: "week7"
+      key: 18,
+      topic: "Paul's Ministry in Corinth",
+      date: "June 27",
+      page: 24,
+      day: "Friday",
+      week: "week1"
     },
     {
-      key: 8,
-      topic: "kened, No titles match the search",
-      date: "June 6",
-      page: 52,
-      day: "Monday",
-      week: "week8"
+      key: 19,
+      topic: "Paul's Ministry in Corinth",
+      date: "June 27",
+      page: 25,
+      day: "Friday",
+      week: "week1"
     },
+    {
+      key: 20,
+      topic: "Paul's Ministry in Corinth",
+      date: "June 27",
+      page: 26,
+      day: "Friday",
+      week: "week1"
+    },
+    {
+      key: 21,
+      topic: "Paul's Ministry in Corinth",
+      date: "June 27",
+      page: 27,
+      day: "Friday",
+      week: "week1"
+    },
+    {
+      key: 22,
+      topic: "Paul's Ministry in Corinth",
+      date: "June 27",
+      page: 28,
+      day: "Friday",
+      week: "week1"
+    },
+    
   ]
 
   function handlePress(week){

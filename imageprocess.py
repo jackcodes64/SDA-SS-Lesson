@@ -22,4 +22,4 @@ alpha = 255 * (white_end - luma) / (white_end - white_start)
 alpha = np.power((255 - luma) / 255.0, 0.6) * 255
 arr[:, :, 3] = alpha
 
-Image.fromarray(arr).save("./assets/images/lesson9.png")
+Image.fromarray(arr).save("./assets/images/lesson1.png")

@@ -36,8 +36,8 @@ const Week8 = ()=>{
                         The Power of Christ’s Resurrection
                     </Text>
 
-                    <View style={{overflow: "hidden", marginTop:10, maxHeight: 120, width: "100%"}}>
-                        <Image source={images.lesson8} resizeMode="contain" style={{maxWidth: 370, maxHeight: 134, width: "100%"}}/>
+                    <View style={{overflow: "hidden", marginTop:1, maxHeight: 150, width: "100%"}}>
+                        <Image source={images.lesson8} resizeMode="contain" style={{maxWidth: 370, maxHeight: 150, width: "100%"}}/>
                     </View>
                     
                     <View style={[{height: 4, marginTop: 5}, isDark?{backgroundColor: "#022a05"}:{backgroundColor: "red"}]}></View>

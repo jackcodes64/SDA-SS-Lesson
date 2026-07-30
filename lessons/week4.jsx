@@ -40,7 +40,7 @@ const Week1 = ()=>{
                         <Image source={images.lesson4} resizeMode="contain" style={{maxWidth: 370, maxHeight: 134, width: "100%"}}/>
                     </View>
                     
-                    <View style={{borderBottomColor: "red", height: 4, marginTop: 5, backgroundColor: "red"}}><View style={[{height: 4, marginTop: 5}, isDark?{backgroundColor: "#022a05"}:{backgroundColor: "red"}]}></View></View>
+                    <View style={[{height: 4, marginTop: 5}, isDark?{backgroundColor: "#022a05"}:{backgroundColor: "red"}]}></View>
                     <Text style={{marginBottom: 10, color: "#022a05"}}>SABBATH AFTERNOON</Text>
 
                     <Text style={{margin: 10}}>
