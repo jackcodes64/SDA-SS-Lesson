@@ -59,7 +59,7 @@ const Search = ()=>{
     {
       key: 4,
       topic: "The City of Corinth",
-      date: "June 30",
+      date: "July 1",
       page: 8,
       day: "Tuesday",
       week: "week1"
@@ -67,15 +67,15 @@ const Search = ()=>{
     {
       key: 5,
       topic: "“Many in This City”",
-      date: "June 31",
+      date: "July 2",
       page: 9,
-      day: "Wedneday",
+      day: "Wednesday",
       week: "week1"
     },
     {
       key: 6,
       topic: "Paul’s Letters to the Corinthians",
-      date: "June 27",
+      date: "July 3",
       page: 10,
       day: "Thursday",
       week: "week1"
@@ -103,9 +103,9 @@ const Search = ()=>{
       page: 20,
       day: "Monday",
       week: "week2"
-    },
+    }, 
     {
-      key: 9,
+      key: 10,
       topic: "Power to Those Who Are Being Saved",
       date: "July 7",
       page: 21,
@@ -113,7 +113,7 @@ const Search = ()=>{
       week: "week2"
     },
     {
-      key: 10,
+      key: 11,
       topic: "A Messiah Crucified",
       date: "July 8",
       page: 22,
@@ -121,7 +121,7 @@ const Search = ()=>{
       week: "week2"
     },
     {
-      key: 11,
+      key: 12,
       topic: "Christ, the Power and Wisdom of God",
       date: "July 9",
       page: 23,
@@ -129,7 +129,7 @@ const Search = ()=>{
       week: "week2"
     },
     {
-      key: 12,
+      key: 13,
       topic: "Unity in Christ",
       date: "July 11",
       page: 31,
@@ -137,86 +137,533 @@ const Search = ()=>{
       week: "week3"
     },
     {
-      key: 13,
-      topic: "Paul's Ministry in Corinth",
+      key: 14,
+      topic: "The Problem of Cliques in Church",
       date: "July 12",
       page: 32,
       day: "Sunday",
       week: "week3"
     },
     {
-      key: 14,
-      topic: "Paul's Ministry in Corinth",
+      key: 15,
+      topic: "Centered on Jesus",
       date: "July 13",
       page: 33,
       day: "Monday",
       week: "week3"
     },
     {
-      key: 15,
-      topic: "Paul's Ministry in Corinth",
+      key: 16,
+      topic: "Wisdom and Maturity",
       date: "July 14",
-      page: 19,
+      page: 34,
       day: "Tuesday",
       week: "week3"
     },
     {
-      key: 16,
-      topic: "Paul's Ministry in Corinth",
+      key: 17,
+      topic: "Christlike Servanthood",
       date: "July 15",
-      page: 22,
+      page: 35,
       day: "Wednesday",
       week: "week3"
     },
     {
-      key: 17,
-      topic: "Paul's Ministry in Corinth",
+      key: 18,
+      topic: "A Lifestyle That Reflects the Cross",
       date: "July 16",
-      page: 23,
+      page: 36,
       day: "Thursday",
       week: "week3"
     },
     {
-      key: 18,
-      topic: "Paul's Ministry in Corinth",
-      date: "June 27",
-      page: 24,
-      day: "Friday",
-      week: "week1"
-    },
-    {
       key: 19,
-      topic: "Paul's Ministry in Corinth",
-      date: "June 27",
-      page: 25,
-      day: "Friday",
-      week: "week1"
+      topic: "Sin in the Church",
+      date: "July 18",
+      page: 44,
+      day: "Saturday",
+      week: "week4"
     },
     {
       key: 20,
-      topic: "Paul's Ministry in Corinth",
-      date: "June 27",
-      page: 26,
-      day: "Friday",
-      week: "week1"
+      topic: "Dissonance Between Faith and Practice",
+      date: "July 19",
+      page: 45,
+      day: "Sunday",
+      week: "week4"
     },
     {
       key: 21,
-      topic: "Paul's Ministry in Corinth",
-      date: "June 27",
-      page: 27,
-      day: "Friday",
-      week: "week1"
+      topic: "Dealing With Scandals",
+      date: "July 20",
+      page: 46,
+      day: "Monday",
+      week: "week4"
     },
     {
       key: 22,
-      topic: "Paul's Ministry in Corinth",
-      date: "June 27",
-      page: 28,
-      day: "Friday",
-      week: "week1"
+      topic: "Protecting the Church's Identity",
+      date: "July 21",
+      page:47,
+      day: "Tuesday",
+      week: "week4"
     },
-    
+    {
+      key: 23,
+      topic: "Antidote Against Sexual Immorality",
+      date: "July 22",
+      page: 48,
+      day: "Wednesday",
+      week: "week4"
+    },
+    {
+      key: 24,
+      topic: "Marriage and Singleness",
+      date: "July 23",
+      page: 49,
+      day: "Thursday",
+      week: "week4"
+    },
+    {
+      key: 25,
+      topic: "All to the Glory of God",
+      date: "July 25",
+      page: 57,
+      day: "Saturday",
+      week: "week5"
+    },
+    {
+      key: 26,
+      topic: "Knowledge Versus Love",
+      date: "July 26",
+      page: 58,
+      day: "Sunday",
+      week: "week5"
+    },
+    {
+      key: 27,
+      topic: "Selfless Love",
+      date: "July 27",
+      page: 59,
+      day: "Monday",
+      week: "week5"
+    },
+    {
+      key: 28,
+      topic: "Learning From the Past",
+      date: "July 28",
+      page: 60,
+      day: "Tuesday",
+      week: "week5"
+    },
+    {
+      key: 29,
+      topic: "Warning Against Idolatry",
+      date: "July 29",
+      page: 61,
+      day: "Wednesday",
+      week: "week5"
+    },
+    {
+      key: 30,
+      topic: "Overcoming Idolatry",
+      date: "July 30",
+      page: 62,
+      day: "Thurday",
+      week: "week5"
+    },
+    {
+      key: 31,
+      topic: "Spiritual Gifts",
+      date: "August 1",
+      page: 72,
+      day: "Saturday",
+      week: "week6"
+    },
+    {
+      key: 32,
+      topic: "Varieties of Gifts",
+      date: "August 2",
+      page: 73,
+      day: "Sunday",
+      week: "week6"
+    },
+    {
+      key: 33,
+      topic: "Unity Through Diversity",
+      date: "August 3",
+      page: 74,
+      day: "Monday",
+      week: "week6"
+    },
+    {
+      key:34,
+      topic: "`A More Excellent Way`",
+      date: "August 4",
+      page: 75,
+      day: "Tuesday",
+      week: "week6"
+    },
+    {
+      key: 35,
+      topic: "The Gift of Tongues",
+      date: "August 5",
+      page: 76,
+      day: "Wednesday",
+      week: "week6"
+    },
+    {
+      key: 36,
+      topic: "The Gift of Prophecy",
+      date: "August 6",
+      page: 77,
+      day: "Thursday",
+      week: "week6"
+    },
+    {
+      key: 37,
+      topic: "A Portrait of Love",
+      date: "August 8",
+      page: 85,
+      day: "Saturday",
+      week: "week7"
+    },
+    {
+      key: 39,
+      topic: "The Essentials of Love",
+      date: "August 9",
+      page: 86,
+      day: "Sunday",
+      week: "week7"
+    },
+    {
+      key: 40,
+      topic: "What Love Does",
+      date: "August 10",
+      page: 87,
+      day: "Monday",
+      week: "week7"
+    },
+    {
+      key: 41,
+      topic: "What Love does Not Do",
+      date: "August 11",
+      page: 88,
+      day: "Tuesday",
+      week: "week7"
+    },
+    {
+      key: 42,
+      topic: "A Portrait of Jesus",
+      date: "August 12",
+      page: 87,
+      day: "Wednesday",
+      week: "week7"
+    },
+    {
+      key: 43,
+      topic: "Faith, Hope, and Love",
+      date: "August 13",
+      page: 88,
+      day: "Thurday",
+      week: "week7"
+    },
+    {
+      key: 44,
+      topic: "The Power of Christ Resurrection",
+      date: "August 15",
+      page: 98,
+      day: "Saturday",
+      week: "week8"
+    },
+    {
+      key: 45,
+      topic: "Proclaiming the Resurrection of Christ",
+      date: "August 16",
+      page: 99,
+      day: "Sunday",
+      week: "week8"
+    },
+    {
+      key: 46,
+      topic: "The Risen Christ, Our Only Hope",
+      date: "August 17",
+      page: 100,
+      day: "Monday",
+      week: "week8"
+    },
+    {
+      key: 47,
+      topic: "Christ, the Firstfruits",
+      date: "August 18",
+      page: 101,
+      day: "Tuesday",
+      week: "week8"
+    },
+    {
+      key: 48,
+      topic: "The Resurrected Body",
+      date: "August 19",
+      page: 102,
+      day: "Wednesday",
+      week: "week8"
+    },
+    {
+      key: 49 ,
+      topic: "Final Victory Over Death",
+      date: "August 20",
+      page: 103,
+      day: "Thurday",
+      week: "week8"
+    },
+    {
+      key: 50,
+      topic: "Love-Driven Ministry",
+      date: "August 22",
+      page: 111,
+      day: "Saturday",
+      week: "week9"
+    },
+    {
+      key: 51,
+      topic: "Thanksgiving",
+      date: "August 23",
+      page: 112,
+      day: "Sunday",
+      week: "week9"
+    },
+    {
+      key: 52,
+      topic: "Simplicity and Sincerity",
+      date: "August 24",
+      page: 113,
+      day: "Monday",
+      week: "week9"
+    },
+    {
+      key: 53,
+      topic: "Changing Plans for Love",
+      date: "August 25",
+      page: 114,
+      day: "Tuesday",
+      week: "week9"
+    },
+    {
+      key: 54,
+      topic: "Forgiveness and Reaffirmation of Love",
+      date: "August 26",
+      page: 115,
+      day: "Wednesday",
+      week: "week9"
+    },
+    {
+      key: 55,
+      topic: "Triump in Christ",
+      date: "August 27",
+      page: 116,
+      day: "Thurday",
+      week: "week9"
+    },
+    {
+      key: 56,
+      topic: "Authentic Christian Ministry",
+      date: "August 29",
+      page: 124,
+      day: "Saturday",
+      week: "week10"
+    },
+    {
+      key: 57,
+      topic: "Fruits of Authentic Ministry",
+      date: "August 30",
+      page: 125,
+      day: "Sunday",
+      week: "week10"
+    },
+    {
+      key: 58,
+      topic: "Suffering and Glory",
+      date: "August 31",
+      page: 126,
+      day: "Monday",
+      week: "week10"
+    },
+    {
+      key: 59,
+      topic: "Christ-focused Ministry of Reconciliation",
+      date: "September 1",
+      page: 127,
+      day: "Tuesday",
+      week: "week10"
+    },
+    {
+      key: 60,
+      topic: "Call to Holiness",
+      date: "September 2",
+      page: 128,
+      day: "Wednesday",
+      week: "week10"
+    },
+    {
+      key: 61,
+      topic: "Comfort and Joy",
+      date: "September 3",
+      page: 129,
+      day: "Thurday",
+      week: "week10"
+    },
+    {
+      key: 62,
+      topic: "Stewardship and Mission",
+      date: "September 5",
+      page: 137,
+      day: "Saturday",
+      week: "week11"
+    },
+    {
+      key: 63,
+      topic: "The Example of Jesus",
+      date: "September 6",
+      page: 138,
+      day: "Sunday",
+      week: "week11"
+    },
+    {
+      key: 64,
+      topic: "Motivation",
+      date: "September 7",
+      page: 138,
+      day: "Monday",
+      week: "week11"
+    },
+    {
+      key: 65,
+      topic: "The Example of Jesus",
+      date: "September 7",
+      page: 139,
+      day: "Tuesday",
+      week: "week11"
+    },
+    {
+      key: 66,
+      topic: "Planning",
+      date: "September 8",
+      page: 140,
+      day: "Tuesday",
+      week: "week11"
+    },
+    {
+      key: 67,
+      topic: "Attitude",
+      date: "September 9",
+      page: 141,
+      day: "Wednesday",
+      week: "week11"
+    },
+    {
+      key: 68,
+      topic: "Unity",
+      date: "September 10",
+      page: 142,
+      day: "Thurday",
+      week: "week11"
+    },
+    {
+      key: 69,
+      topic: "Dealing With False Teachers",
+      date: "September 12",
+      page: 150,
+      day: "Saturday",
+      week: "week12"
+    },
+    {
+      key: 70,
+      topic: "Spiritual Wars",
+      date: "September 13",
+      page: 151,
+      day: "Sunday",
+      week: "week12"
+    },
+    {
+      key: 71,
+      topic: "Boasting in the Lord",
+      date: "September 14",
+      page: 152,
+      day: "Monday",
+      week: "week12"
+    },
+    {
+      key: 72,
+      topic: "False Teachers Identified",
+      date: "September 15",
+      page: 153,
+      day: "Tuesday",
+      week: "week12"
+    },
+    {
+      key: 73,
+      topic: "Suffering for the Sake of the Gospel",
+      date: "September 16",
+      page: 154,
+      day: "Wednesday",
+      week: "week12"
+    },
+    {
+      key: 74,
+      topic: "Appeal to the Unrepentant",
+      date: "September 17",
+      page: 155,
+      day: "Thursday",
+      week: "week12"
+    },
+    {
+      key: 75,
+      topic: "Grace, Love, and Fellowship",
+      date: "September 19",
+      page: 163,
+      day: "Saturday",
+      week: "week13"
+    },
+    {
+      key: 76,
+      topic: "The Grace of Jesus",
+      date: "September 20",
+      page: 164,
+      day: "Sunday",
+      week: "week13"
+    },
+    {
+      key: 77,
+      topic: "The Love of God",
+      date: "September 21",
+      page: 165,
+      day: "Monday",
+      week: "week13"
+    },
+    {
+      key: 78,
+      topic: "The God of Love",
+      date: "September 22",
+      page: 166,
+      day: "Tuesday",
+      week: "week13"
+    },
+    {
+      key: 79,
+      topic: "The Fellowship of the Holy Spirit",
+      date: "September 23",
+      page: 167,
+      day: "Wednesday",
+      week: "week13"
+    },
+    {
+      key: 80,
+      topic: "Our Triune God",
+      date: "September 24",
+      page: 168,
+      day: "Thurday",
+      week: "week13"
+    },
   ]
 
   function handlePress(week){
