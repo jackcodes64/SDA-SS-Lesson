@@ -4,19 +4,19 @@
     "slug": "sdass_lesson",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/sda_logo.png",
+    "icon": "./assets/images/logosda.png",
     "scheme": "sdasslesson",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/images/sda_logo.png",
-      "bundleIdentifier": "com.anonymous.sdass-Lesson",
+      "icon": "./assets/images/sdalogo.png",
+      "bundleIdentifier": "com.anonymous.sdass-lesson",
       "buildNumber": "1"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#ffffff",
-        "foregroundImage": "./assets/images/sda.jpg",
-        "backgroundImage": "./assets/images/sda_logo.png",
+        "backgroundColor": "#729a74",
+        "foregroundImage": "./assets/images/sdalogo.png",
+        "backgroundImage": "./assets/images/background.png",
         "monochromeImage": "./assets/images/sda_logo.png"
       },
       "versionCode": 1,
@@ -32,10 +32,12 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
-          "android": {
-            "image": "./assets/images/sda_logo.png",
-            "imageWidth": 76
+          "backgroundColor": "#729a74",
+          "image": "./assets/images/logosda.png",
+          "imageWidth": 200,
+          "dark": {
+            "backgroundColor": "#729a74",
+            "image": "./assets/images/logosda.png"
           }
         }
       ]
@@ -45,10 +47,7 @@
       "reactCompiler": true
     },
     "extra": {
-      "router": {},
-      "eas": {
-        "projectId": "73323023-8dbd-4f7b-8b9e-0e6bc6cbd265"
-      }
+      "router": {}
     }
   }
 }
