@@ -46,7 +46,7 @@ const SideBar = ()=>{
         return(
             <Animated.View style={[isDark? styles.sidebar: styles.sidebarLight, {transform: [{ translateX: animSideBar }]}]}>
                               <View style={{alignItems: "center", backgroundColor: "#acc4b7"}}>
-                                <Image source={images.logo}/>
+                                <Image source={images.logo} resizeMode="contain" style={{height: 100}}/>
                                 <Text style={{color: "rgb(7, 101, 7)", fontStyle: "italic", fontSize: 18, marginBottom: 10}}> SDA SS LESSON </Text>
                               </View>
     
