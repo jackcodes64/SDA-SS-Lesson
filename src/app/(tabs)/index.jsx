@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { Image, Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Options from "../../../components/options";
 import SideBar from "../../../components/sidebar";
+import {mixpanel} from "../../../services/mixpanel"
 import SwitchC from "../../../components/switch";
 import { images } from "../../../constants/images";
 import { FontContext } from "../../../contexts/font";
@@ -47,7 +48,9 @@ export default function Index() {
   function handleSidebar(){ //gen
     setOptions(false)
     setSideBar(!sidebar)
+    mixpanel.track("Toggled Sidebar", { where: "home" });
   }
+  
   function handleOption(){
     setSideBar(false)
     setOptions(!options)
