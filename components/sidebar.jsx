@@ -22,9 +22,9 @@ const SideBar = ()=>{
     const onShare = async()=>{
             try{
                 const result = await Share.share({
-                    message: "Download New SDA SS Lesson App! at https://baremetals.co.ke", //update on availability
+                    message: "Download New SDA SS Lesson App! at https://tichtech.co.ke", //update on availability + rate app link
                     title: "SDA SS Lesson App",
-                    url: "https://baremetals.co.ke" //update
+                    url: "https://tichtech.co.ke" //update
                 });
     
                 if(result.action === Share.sharedAction){
@@ -77,7 +77,7 @@ const SideBar = ()=>{
                               <View style={{borderBottomColor: "#acc4b7", borderBottomWidth: 0.5}}></View>
     
                               <View style={{padding: 20, gap: 10,}}>
-                                <Link href={"https://baremetals.co.ke"}>
+                                <Link href={"https://tichtech.co.ke"}>
                                     <View style={{flexDirection: "row", gap: 20}}>
                                         <Image source={images.rate} resizeMode="contain" style={{width: 24, height: 24}}/>
                                         <Text style={{fontSize: 18, color: "white"}}> Rate App </Text>
@@ -93,14 +93,21 @@ const SideBar = ()=>{
                                     <Image source={images.fontsize} resizeMode="contain" style={{width: 30, height: 30}}/>
                                     <Text style={{fontSize: 18, color: "white"}}>Font Size </Text>
                                 </TouchableOpacity>
+
+                                <Link href={"https://baremetals.co.ke/sda-lesson-privacy-policy.html"}>
+                                    <View style={{flexDirection: "row", gap: 20}}>
+                                        <Image source={images.privacy} resizeMode="contain" style={{width: 24, height: 24}}/>
+                                        <Text style={{fontSize: 18, color: "white"}}> Privacy Policy</Text>
+                                    </View>
+                                </Link>
     
                               </View>
                               
                               <View style={{borderBottomColor: "#acc4b7", borderBottomWidth: 0.5, marginBottom: 40}}></View>
     
-                              <View style={{padding: 20, gap: 1, marginTop: 50}}>
+                              <View style={{padding: 20, gap: 1, marginTop: 20}}>
                                 <Text style={isDark? {color: "#acc4b7"}:{color: "black"} }>SDA SS Lesson, v1.0.0.1, Crescent.</Text>
-                                <Link href="https://baremetals.co.ke/services.html" style={isDark? styles.copyright: styles.copyrightLight}> 
+                                <Link href="https://tichtech.co.ke" style={isDark? styles.copyright: styles.copyrightLight}> 
                                   <Text style={{fontSize: 18, color: 'white'}}>©</Text> TichTech Solutions, 2026.
                                 </Link>
                               </View>

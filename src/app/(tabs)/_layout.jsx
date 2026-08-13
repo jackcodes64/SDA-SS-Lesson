@@ -11,7 +11,6 @@ import { SidebarContext } from "../../../contexts/sidebar"
 import { ThemeContext } from "../../../contexts/theme"
 import { ThemeSetContext } from "../../../contexts/themeset"
 
-
 const _Layout = ()=>{
     const [sidebar, setSideBar] = useState(false);
     const [isDark, setIsDark] = useState(true);
@@ -52,7 +51,7 @@ const _Layout = ()=>{
 
                                         screenListeners={{
                                             tabPress: (e)=>{
-                                                //Alert.alert("Executed")
+                                                 //Alert.alert("Executed")
                                                 setWeek(null);
                                                 setCurrentScreen(null);
                                             }
@@ -162,6 +161,5 @@ const styles = StyleSheet.create({
         height: 25,
     }
 })
-
 
 export default _Layout

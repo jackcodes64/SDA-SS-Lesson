@@ -1,6 +1,6 @@
 import { usePathname } from "expo-router";
 import { useContext, useEffect, useState } from "react";
-import { Image, Pressable, ScrollView, StyleSheet, Text, ToastAndroid, TouchableOpacity, View } from "react-native";
+import { Image, Pressable, ScrollView, Share, StyleSheet, Text, ToastAndroid, TouchableOpacity, View } from "react-native";
 import AwakeSet from "../../../components/awakeset";
 import FontSet from "../../../components/fontset";
 import NotifySet from "../../../components/notifyset";
@@ -34,6 +34,29 @@ const Settings = ()=>{
   const [updateSet, setUpdateSet] = useState(false);
   const [update, setUpdate] = useState(true);
   const [resetSet, setResetSet] = useState(false);
+
+  const onShare = async()=>{
+    try{
+        const result = await Share.share({
+            message: "Download New SDA SS Lesson App! at https://tichtech.co.ke", //update on availability + rate app link
+            title: "SDA SS Lesson App",
+            url: "https://tichtech.co.ke" //update
+        });
+
+        if(result.action === Share.sharedAction){
+            if(result.activityType){
+                //Alert.alert("shared with activity: ", result.activityType); 
+                console.log("shared with activity: ", result.activityType);
+            } else{
+                console.log("Shared")
+            }
+        } else if(result === Share.dismissedAction){
+            console.log("Dismissed");
+        }
+    } catch (error){
+        Alert.alert("Error", error.message);
+    }
+};
 
   function changeFontSize (){ //gen
     if(font=="medium"){
@@ -139,7 +162,7 @@ const Settings = ()=>{
                             </View>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={()=>{}} style={[styles.setting, isDark? {backgroundColor: "#729a74"}: {backgroundColor: "#acc4b7", borderBottomColor: "#5b955e", }]}>
+                        <TouchableOpacity onPress={onShare} style={[styles.setting, isDark? {backgroundColor: "#729a74"}: {backgroundColor: "#acc4b7", borderBottomColor: "#5b955e", }]}>
                             <Image source={images.share} resizeMode="contain" style={{width: 26, height: 24, marginHorizontal: 10}}/>
                             <View>
                                 <Text style={{fontWeight: "bold", fontSize: 20, lineHeight: 19}}>Share</Text>
