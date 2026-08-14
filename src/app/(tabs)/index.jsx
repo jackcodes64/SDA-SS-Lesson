@@ -187,7 +187,7 @@ export default function Index() {
   };
   
   return (
-    <View style={{backgroundColor: "#010d02", height: "100%", paddingBottom: 75}}>
+    <View style={{backgroundColor: "#010d02", height: "100%", paddingBottom: 95}}>
                 <View style={{backgroundColor: "#010d02", minHeight: 47}}></View>
 
                 <View style={isDark? styles.headerFull: styles.headerFullLight}> 

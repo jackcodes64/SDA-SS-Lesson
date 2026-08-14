@@ -4,7 +4,7 @@
     "slug": "sdass_lesson",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/logos.png",
+    "icon": "./assets/images/bg.png",
     "scheme": "sdasslesson",
     "userInterfaceStyle": "automatic",
     "ios": {
@@ -32,12 +32,12 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#729a74",
-          "image": "./assets/images/logos.png",
+          "backgroundColor": "#acc4b7",
+          "image": "./assets/images/bg.png",
           "imageWidth": 200,
           "dark": {
-            "backgroundColor": "#729a74",
-            "image": "./assets/images/logosda.png"
+            "backgroundColor": "#acc4b7",
+            "image": "./assets/images/bg.png"
           }
         }
       ]

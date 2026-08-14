@@ -702,7 +702,7 @@ const Search = ()=>{
     }, [pathname])
 
     return(
-        <View style={{backgroundColor: "#010d02", height: "100%", paddingBottom: 180}}>
+        <View style={{backgroundColor: "#010d02", height: "100%", paddingBottom: 200}}>
             <View style={{backgroundColor: "#010d02", minHeight: 47}}></View>
                 
                 <View style={isDark? styles.headerFull: styles.headerFullLight}> 

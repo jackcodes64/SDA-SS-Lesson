@@ -70,7 +70,7 @@ const About = ()=>{
                     </View>
                 {sidebar && <SideBar />}
             <ScrollView 
-                style={[isDark? {backgroundColor: "#acc4b7"}: {backgroundColor: "white"}, {marginBottom: 180}]}
+                style={[isDark? {backgroundColor: "#acc4b7"}: {backgroundColor: "white"}, {marginBottom: 200}]}
                 showsVerticalScrollIndicator={false}
                 overScrollMode="never"
                 contentContainerStyle={{overflow: "hidden"}}
@@ -85,8 +85,8 @@ const About = ()=>{
                     </Text>
 
                     <Text style={[isDark?styles.header: styles.headerLight, font==="medium"? {fontSize: 22}: (font==="large"?{fontSize: 24}: {fontSize: 20})]}>Appreciation</Text>
-                    <Text style={[styles.body, font==="medium"? {fontSize: 19}: (font==="large"?{fontSize: 21}: {fontSize: 17})]}>We would like to recognize the effort of Barrack Otieno and Josephene 
-                        Okebe in editing, proofreading and financing publishing of this quarter's Lesson.
+                    <Text style={[styles.body, font==="medium"? {fontSize: 19}: (font==="large"?{fontSize: 21}: {fontSize: 17})]}>
+                      We would like to acknowledge Barrack Otieno and Josephene Okebe for their work in editing, proofreading, and financing the publication of this quarter's SDA SS Lesson.
                     </Text>
 
                     <Text style={isDark?styles.header: styles.headerLight}>Support</Text>
@@ -98,7 +98,7 @@ const About = ()=>{
                         <Text style={{color: "#181717", fontSize: 19, fontStyle: "italic", paddingLeft: 10}}> ∘ share on social media or </Text>
                         <Text style={{color: "#181717", fontSize: 19, fontStyle: "italic", paddingLeft: 10}}> ∘ recommend improvements. </Text>
                     <Text style={[styles.body, font==="medium"? {fontSize: 19}: (font==="large"?{fontSize: 21}: {fontSize: 17})]}>You can also support the team by letting us develop your business' software solutions. For more 
-                        information, check our <Link href="https://baremetals.co.ke/services.html" style={{color: "#0d5623"}}>website</Link>.
+                        information, check our <Link href="https://tichtech.co.ke" style={{color: "#0d5623"}}>website</Link>.
                     </Text>
 
                     <Text style={[isDark?styles.header: styles.headerLight, font==="medium"? {fontSize: 22}: (font==="large"?{fontSize: 24}: {fontSize: 20})]}>Developer</Text>

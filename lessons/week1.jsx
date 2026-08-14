@@ -300,7 +300,7 @@ const Week1 = ()=>{
                 </View>
 
                 <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}> 
-                    <Text style={{fontWeight: "bold", margin: 10}}>137</Text>
+                    <Text style={{fontWeight: "bold", margin: 10}}>8</Text>
                 </View>
                 <View style={isDark? styles.bar: styles.barLight}></View>
 

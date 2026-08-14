@@ -103,9 +103,9 @@ const SideBar = ()=>{
     
                               </View>
                               
-                              <View style={{borderBottomColor: "#acc4b7", borderBottomWidth: 0.5, marginBottom: 40}}></View>
+                              <View style={{borderBottomColor: "#acc4b7", borderBottomWidth: 0.5, marginBottom: 20}}></View>
     
-                              <View style={{padding: 20, gap: 1, marginTop: 20}}>
+                              <View style={{padding: 20, gap: 1, marginTop: 10}}>
                                 <Text style={isDark? {color: "#acc4b7"}:{color: "black"} }>SDA SS Lesson, v1.0.0.1, Crescent.</Text>
                                 <Link href="https://tichtech.co.ke" style={isDark? styles.copyright: styles.copyrightLight}> 
                                   <Text style={{fontSize: 18, color: 'white'}}>©</Text> TichTech Solutions, 2026.

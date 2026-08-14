@@ -19,9 +19,9 @@ const Options = () => {
     const onShare = async()=>{
         try{
             const result = await Share.share({
-                message: "Download New Dholuo Lesson App! at https://baremetals.co.ke", //update on availability
-                title: "Dholuo Lesson App",
-                url: "https://baremetals.co.ke" //update
+                message: "Download New SDA Sabbath School Lesson App! at https://baremetals.co.ke", //update on availability
+                title: "SDA Lesson App",
+                url: "https://tichtech.co.ke" //update
             });
 
             if(result.action === Share.sharedAction){

@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#022a05",
         borderRadius: 50,
         marginHorizontal: 16,
-        marginBottom: 50,
+        marginBottom: 65,
         height: 30,
         position: "absolute",
         overflow: "hidden", //....
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#729a74",
         borderRadius: 50,
         marginHorizontal: 18,
-        marginBottom: 50,
+        marginBottom: 65,
         height: 30,
         position: "absolute",
         overflow: "hidden", //....

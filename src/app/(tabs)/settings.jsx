@@ -92,7 +92,7 @@ const Settings = ()=>{
     }, [pathname])
 
     return(
-       <View style={{backgroundColor: "#010d02", height: "100%", paddingBottom: 180}}>
+       <View style={{backgroundColor: "#010d02", height: "100%", paddingBottom: 200}}>
             <View style={{backgroundColor: "#010d02", minHeight: 47}}></View>
                 
                 <View style={isDark? styles.headerFull: styles.headerFullLight}> 
@@ -166,7 +166,7 @@ const Settings = ()=>{
                             <Image source={images.share} resizeMode="contain" style={{width: 26, height: 24, marginHorizontal: 10}}/>
                             <View>
                                 <Text style={{fontWeight: "bold", fontSize: 20, lineHeight: 19}}>Share</Text>
-                                <Text style={styles.explainer}>Share Dholuo Lesson with Friends. </Text>
+                                <Text style={styles.explainer}>Share SDA SS Lesson with Friends. </Text>
                             </View>
                         </TouchableOpacity>
 
@@ -174,7 +174,7 @@ const Settings = ()=>{
                             <Image source={images.rate} resizeMode="contain" style={{width: 26, height: 24, marginHorizontal: 10}}/>
                             <View>
                                 <Text style={{fontWeight: "bold", fontSize: 20, lineHeight: 19}}>Review</Text>
-                                <Text style={styles.explainer}>Rate Dholuo Lesson on Play Store.</Text>
+                                <Text style={styles.explainer}>Rate SDA SS Lesson on Play Store.</Text>
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={()=>setResetSet(true)} style={[styles.setting, isDark? {backgroundColor: "#729a74"}: {backgroundColor: "#acc4b7", borderBottomColor: "#5b955e", }]}>

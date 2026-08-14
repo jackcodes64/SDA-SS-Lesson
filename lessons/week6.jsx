@@ -111,7 +111,7 @@ const Week6 = ()=>{
                     
 
                     <Text style={{fontSize: 30, fontStyle: "italic"}}>
-                        _____________________
+                        Varieties of Gifts
                     </Text>
 
                     
