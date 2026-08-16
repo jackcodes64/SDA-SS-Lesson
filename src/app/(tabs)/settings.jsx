@@ -92,7 +92,7 @@ const Settings = ()=>{
     }, [pathname])
 
     return(
-       <View style={{backgroundColor: "#010d02", height: "100%", paddingBottom: 200}}>
+       <View style={{backgroundColor: "#010d02", height: "100%", paddingBottom: 185}}>
             <View style={{backgroundColor: "#010d02", minHeight: 47}}></View>
                 
                 <View style={isDark? styles.headerFull: styles.headerFullLight}> 

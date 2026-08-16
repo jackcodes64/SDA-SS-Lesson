@@ -10,6 +10,7 @@ import { SearchContext } from "../../../contexts/search"
 import { SidebarContext } from "../../../contexts/sidebar"
 import { ThemeContext } from "../../../contexts/theme"
 import { ThemeSetContext } from "../../../contexts/themeset"
+import { useSafeAreaInsets } from "react-native-safe-area-context"
 
 const _Layout = ()=>{
     const [sidebar, setSideBar] = useState(false);
@@ -21,6 +22,7 @@ const _Layout = ()=>{
     const [week, setWeek] = useState(null);
     const [currentScreen, setCurrentScreen] = useState(null);
     const router = useRouter();
+    const inset = useSafeAreaInsets();
 
     const TabIcon = ({focused, icon, title})=>{
         if(focused){
@@ -64,7 +66,17 @@ const _Layout = ()=>{
                                                 alignItems: "center",
                                                 paddingTop: 25,
                                             }, 
-                                            tabBarStyle: isDark? styles.tabBar: styles.tabBarLight,
+                                            tabBarStyle: [{borderRadius: 50, 
+                                                marginHorizontal: 16,
+                                                marginBottom: 2 + inset.bottom,
+                                                height: 55,
+                                                position: "absolute",
+                                                overflow: "hidden",
+                                                borderWidth: 1,
+                                                borderTopWidth: 2,
+                                                borderColor: "white",
+                                                zIndex: 2001}, 
+                                                isDark? styles.tabBar: styles.tabBarLight]
                                         }}>
                                         
                                         <Tabs.Screen 
@@ -123,29 +135,9 @@ const styles = StyleSheet.create({
     },
     tabBar: {
         backgroundColor: "#022a05",
-        borderRadius: 50,
-        marginHorizontal: 16,
-        marginBottom: 65,
-        height: 30,
-        position: "absolute",
-        overflow: "hidden", //....
-        borderWidth: 1,
-        borderTopWidth: 2,
-        borderColor: "white",
-        zIndex: 2001
     },
     tabBarLight: {
         backgroundColor: "#729a74",
-        borderRadius: 50,
-        marginHorizontal: 18,
-        marginBottom: 65,
-        height: 30,
-        position: "absolute",
-        overflow: "hidden", //....
-        borderTopWidth: 2,
-        borderWidth: 1,
-        borderColor: "white",
-        zIndex: 2001        
     },
     icon: {
         marginBottom: 25,

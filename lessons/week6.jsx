@@ -114,7 +114,6 @@ const Week6 = ()=>{
                         Varieties of Gifts
                     </Text>
 
-                    
                     <Text style={font=="medium"?styles.body:(font=="large"? styles.bodyLarge: styles.bodySmall)}>
                         In 1 Corinthians 12:1, Paul introduces a new topic with the for-
                         mula “now concerning.” Scholars discuss whether he is talking about

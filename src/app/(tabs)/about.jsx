@@ -70,7 +70,7 @@ const About = ()=>{
                     </View>
                 {sidebar && <SideBar />}
             <ScrollView 
-                style={[isDark? {backgroundColor: "#acc4b7"}: {backgroundColor: "white"}, {marginBottom: 200}]}
+                style={[isDark? {backgroundColor: "#acc4b7"}: {backgroundColor: "white"}, {marginBottom: 185}]}
                 showsVerticalScrollIndicator={false}
                 overScrollMode="never"
                 contentContainerStyle={{overflow: "hidden"}}

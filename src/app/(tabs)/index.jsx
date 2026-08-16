@@ -1,6 +1,8 @@
 import { usePathname, useRouter } from "expo-router";
 import { useContext, useEffect, useState } from "react";
-import { Image, Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import NetInfo from "@react-native-community/netinfo";
+import {supabase} from "../../../services/supabaseInit";
+import { Image, Keyboard, Pressable, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Options from "../../../components/options";
 import SideBar from "../../../components/sidebar";
 import {mixpanel} from "../../../services/mixpanel"
@@ -66,11 +68,81 @@ export default function Index() {
   )
 
   const Home = ()=>{
+    const [tester, setTester] = useState("");
+    const checkNet = async()=>{
+      const state = await NetInfo.fetch();
+      return state.isInternetReachable;     
+    }
+    async function sendTester(){
+      try{
+
+        //Network Error
+        const state = await checkNet();
+        if(!state){
+          alert("It looks like you're offline. Please try again later.");
+          throw new Error("Unstable Connection")
+        }
+
+        //Blank Error
+        if(tester.trim() === ""){
+          alert("Please enter your name");
+          throw new Error("Blank Input");
+        }
+
+        //Single Name Error
+        if(tester.split(" ").length < 2){
+          alert(`Please ${tester}, include your other name.`);
+          throw new Error("Single name");
+        }
+
+        //Database Conn Error
+        const {data, error} = await supabase.from("Email_Signups").insert([{email_address: tester}]).select();        
+        if(error){
+          console.error(error);
+          throw new Error("Failed to Insert");
+        }
+
+        //Response Log
+        console.log("Data :", data);
+
+        alert(`Thank you ${tester.split(" ")[0]}, today's test is complete.`)
+      }catch(err){
+        console.error("There was an input error:", err.message);
+      }finally{
+        //house cleaning
+        setTester("");
+        Keyboard.dismiss();
+      }
+    }
     return (<>
+                <View><Text style={{color: "red",paddingHorizontal: 5}}>📌 Temporary Feature!</Text></View>
+                <View><Text style={{color: "white",paddingHorizontal: 5}}>Please send your two names thru' this temporary form to enable tester confirmation.</Text></View>
+                <View style={{flexDirection: "row", justifyContent: "space-between", alignItems: "center"}}>
+                <View style={[{flexDirection: "row", margin: 5, borderRadius: 50, paddingHorizontal: 5, borderWidth: 1, borderBottomWidth: 2, borderColor: "#022a05"}, isDark? {backgroundColor: "#729a74"}:{backgroundColor: "#acc4b7",}]}>
+                  <TextInput
+                    placeholder="e.g Jack Orwa"
+                    value={tester}
+                    autoCorrect={false}
+                    onChangeText={setTester}
+                    returnKeyType="send"
+                    placeholderTextColor={"white"}
+                    onSubmitEditing={sendTester}
+                    style={{fontSize: 16, lineHeight:18, minWidth: "70%"}}
+                  />
+                </View>
+                <TouchableOpacity onPress={sendTester} style={{marginHorizontal: 5,borderRadius: 27, height: 40, padding: 7, backgroundColor: "green", width: 70}}>
+                    <Text style={{color: "white", paddingLeft: 10, fontSize: 17}}>Send</Text>
+                </TouchableOpacity>
+
+                </View>
                     <View style={isDark? styles.homebg: styles.homebgLight}>
                             <Text style={[isDark? styles.header: styles.headerLight, font=="medium"?{fontSize: 25}:( font=="large"?{fontSize: 27}:{fontSize: 23})]}>TABLE OF CONTENTS</Text>
                     </View>
-                    <ScrollView style={isDark? styles.table: styles.tableLight} showsVerticalScrollIndicator={false}>
+                    <ScrollView style={isDark? styles.table: styles.tableLight} 
+                    showsVerticalScrollIndicator={false}
+                    overScrollMode="never"
+                    contentContainerStyle={{overflow: "hidden"}}
+                    bounces={false}>
                         <View  style={{margin: 10, paddingBottom: 15}}>
 
                         <TouchableOpacity onPress={()=>setCurrentScreen("week1")}>
@@ -187,7 +259,7 @@ export default function Index() {
   };
   
   return (
-    <View style={{backgroundColor: "#010d02", height: "100%", paddingBottom: 95}}>
+    <View style={{backgroundColor: "#010d02", height: "100%", paddingBottom: 80}}>
                 <View style={{backgroundColor: "#010d02", minHeight: 47}}></View>
 
                 <View style={isDark? styles.headerFull: styles.headerFullLight}> 

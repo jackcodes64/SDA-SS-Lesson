@@ -48,7 +48,7 @@ const Week7 = ()=>{
                             Read for This Week’s Study: 
                         </Text>
                         <Text style={{fontStyle: "italic", fontSize: 18, }}>
-                            11 Corinthians 13; Matt.
+                            1 Corinthians 13; Matt.
                             24:12; Gal. 5:22, 23; 1 Tim. 1:14; 1 John 4:8.
                         </Text>
                     </Text>
