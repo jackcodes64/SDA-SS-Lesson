@@ -74,6 +74,7 @@ export default function Index() {
       return state.isInternetReachable;     
     }
     async function sendTester(){
+      mixpanel.track(`${tester} attempted`, { where: "home" });
       try{
 
         //Network Error
