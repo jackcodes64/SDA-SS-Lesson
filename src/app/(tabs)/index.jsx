@@ -2,7 +2,7 @@ import { usePathname, useRouter } from "expo-router";
 import { useContext, useEffect, useState } from "react";
 import NetInfo from "@react-native-community/netinfo";
 import {supabase} from "../../../services/supabaseInit";
-import { Image, Keyboard, Pressable, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Alert, Image, Keyboard, Pressable, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Options from "../../../components/options";
 import SideBar from "../../../components/sidebar";
 import {mixpanel} from "../../../services/mixpanel"
@@ -69,52 +69,51 @@ export default function Index() {
 
   const Home = ()=>{
     const [tester, setTester] = useState("");
+
     const checkNet = async()=>{
       const state = await NetInfo.fetch();
       return state.isInternetReachable;     
     }
+
     async function sendTester(){
-      mixpanel.track(`${tester} attempted`, { where: "home" });
+      const cleanName = tester.trim();
+
+      //mixpanel.track(`${tester} attempted`, { where: "home" });
+
+      //Blank Error
+      if(!cleanName){
+        Alert.alert("Notice","Please enter your name");
+      }
+
+      const nameParts = cleanName.split(" ");
+      //Single Name Error
+      if(nameParts.length < 2){
+        Alert.alert("Notice",`Please ${tester}, include your second name.`);
+        return;
+      }
       try{
-
         //Network Error
-        const state = await checkNet();
-        if(!state){
-          alert("It looks like you're offline. Please try again later.");
-          throw new Error("Unstable Connection")
-        }
-
-        //Blank Error
-        if(tester.trim() === ""){
-          alert("Please enter your name");
-          throw new Error("Blank Input");
-        }
-
-        //Single Name Error
-        if(tester.split(" ").length < 2){
-          alert(`Please ${tester}, include your other name.`);
-          throw new Error("Single name");
+        const isOnline = await checkNet();
+        if(!isOnline){
+          alert("Offline", "It looks like you're offline. Check your connection.");
+          return;
         }
 
         //Database Conn Error
-        const {data, error} = await supabase.from("Email_Signups").insert([{email_address: tester}]).select();        
+        const {error} = await supabase.from("Email_Signups").insert([{email_address: tester}]).select();        
+        
         if(error){
-          console.error(error);
-          throw new Error("Failed to Insert");
+          throw error;
         }
 
-        //Response Log
-        console.log("Data :", data);
-
-        alert(`Thank you ${tester.split(" ")[0]}, today's test is complete.`)
-      }catch(err){
-        console.error("There was an input error:", err.message);
-      }finally{
-        //house cleaning
+        Alert.alert( "Success", `Thank you ${tester.split(" ")[0]}, today's test is complete.`)
         setTester("");
         Keyboard.dismiss();
+      }catch(err){
+        Alert.alert("Error", "Could not submit. Try again.")
       }
     }
+
     return (<>
                 <View><Text style={{color: "red",paddingHorizontal: 5}}>📌 Temporary Feature!</Text></View>
                 <View><Text style={{color: "white",paddingHorizontal: 5}}>Please send your two names thru' this temporary form to enable tester confirmation.</Text></View>
@@ -128,11 +127,11 @@ export default function Index() {
                     returnKeyType="send"
                     placeholderTextColor={"white"}
                     onSubmitEditing={sendTester}
-                    style={{fontSize: 16, lineHeight:18, minWidth: "70%"}}
+                    style={{fontSize: 16, lineHeight:18, minWidth: "70%", paddingVertical: 8, color: "white"}}
                   />
                 </View>
-                <TouchableOpacity onPress={sendTester} style={{marginHorizontal: 5,borderRadius: 27, height: 40, padding: 7, backgroundColor: "green", width: 70}}>
-                    <Text style={{color: "white", paddingLeft: 10, fontSize: 17}}>Send</Text>
+                <TouchableOpacity onPress={sendTester} style={{marginHorizontal: 5,borderRadius: 27, height: 35, padding: 7, backgroundColor: "green", width: 70}}>
+                    <Text style={{color: "white", textAlign: "center", fontWeight: "bold", fontSize: 16}}>Send</Text>
                 </TouchableOpacity>
 
                 </View>
