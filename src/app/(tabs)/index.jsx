@@ -1,7 +1,7 @@
 import { usePathname, useRouter } from "expo-router";
 import { useContext, useEffect, useState } from "react";
-//import NetInfo from "@react-native-community/netinfo";
-//import {supabase} from "../../../services/supabaseInit";
+import NetInfo from "@react-native-community/netinfo";
+import {supabase} from "../../../services/supabaseInit";
 import { Alert, Image, Keyboard, Pressable, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Options from "../../../components/options";
 import SideBar from "../../../components/sidebar";
@@ -30,12 +30,10 @@ import Week9 from "../../../lessons/week9";
 export default function Index() {
   const [currentScreen, setCurrentScreen] = useContext(CurrentScreenContext);
   const [options, setOptions] = useState(false);
-  const [lesson, setLesson] = useState(false);
   const [sidebar, setSideBar] = useContext(SidebarContext);
   const [isDark, setIsDark] = useContext(ThemeContext);
   const [font, setFont] = useContext(FontContext);
   const [week, setWeek] = useContext(SearchContext);
-  const router = useRouter();
 
   function changeFontSize (){ //gen
     if(font=="medium"){
@@ -71,9 +69,8 @@ export default function Index() {
     const [tester, setTester] = useState("");
 
     const checkNet = async()=>{
-      // const state = await NetInfo.fetch();
-      // return state.isInternetReachable;     
-      return true;
+      const state = await NetInfo.fetch();
+      return state.isInternetReachable;     
     }
 
     async function sendTester(){
@@ -96,12 +93,12 @@ export default function Index() {
         //Network Error
         const isOnline = await checkNet();
         if(!isOnline){
-          alert("Offline", "It looks like you're offline. Check your connection.");
+          Alert.alert("Offline", "It looks like you're offline. Check your connection.");
           return;
         }
 
         //Database Conn Error
-        const {error} = false//await supabase.from("Email_Signups").insert([{email_address: tester}]).select();        
+        const {error} = await supabase.from("Email_Signups").insert([{email_address: tester}]);        
         
         if(error){
           throw error;

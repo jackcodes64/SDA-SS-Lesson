@@ -9,7 +9,7 @@
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/images/sdalogo.png",
-      "bundleIdentifier": "com.anonymous.sdass-lesson",
+      "bundleIdentifier": "com.anonymous.sdasslesson",
       "buildNumber": "1"
     },
     "android": {
@@ -47,7 +47,10 @@
       "reactCompiler": true
     },
     "extra": {
-      "router": {}
+      "router": {},
+      "eas": {
+        "projectId": "92415176-1f08-41d8-8496-15148a9f2f82"
+      }
     }
   }
 }
