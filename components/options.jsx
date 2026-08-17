@@ -21,7 +21,7 @@ const Options = () => {
             const result = await Share.share({
                 message: "Download New SDA Sabbath School Lesson App! at https://baremetals.co.ke", //update on availability
                 title: "SDA Lesson App",
-                url: "https://tichtech.co.ke" //update
+                url: "https:/play.google.com/store/apps/details?=id=com.tichtech.sdass_lesson" //update
             });
 
             if(result.action === Share.sharedAction){

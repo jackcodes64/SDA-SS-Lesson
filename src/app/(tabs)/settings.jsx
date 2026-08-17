@@ -38,9 +38,9 @@ const Settings = ()=>{
   const onShare = async()=>{
     try{
         const result = await Share.share({
-            message: "Download New SDA SS Lesson App! at https://tichtech.co.ke", //update on availability + rate app link
+            message: "Download New SDA SS Lesson App! at https:/play.google.com/store/apps/details?=id=com.tichtech.sdass_lesson", //update on availability + rate app link
             title: "SDA SS Lesson App",
-            url: "https://tichtech.co.ke" //update
+            url: "https:/play.google.com/store/apps/details?=id=com.tichtech.sdass_lesson" //update
         });
 
         if(result.action === Share.sharedAction){
