@@ -1,7 +1,7 @@
 import { usePathname, useRouter } from "expo-router";
 import { useContext, useEffect, useState } from "react";
-import NetInfo from "@react-native-community/netinfo";
-import {supabase} from "../../../services/supabaseInit";
+//import NetInfo from "@react-native-community/netinfo";
+//import {supabase} from "../../../services/supabaseInit";
 import { Alert, Image, Keyboard, Pressable, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Options from "../../../components/options";
 import SideBar from "../../../components/sidebar";
@@ -71,8 +71,9 @@ export default function Index() {
     const [tester, setTester] = useState("");
 
     const checkNet = async()=>{
-      const state = await NetInfo.fetch();
-      return state.isInternetReachable;     
+      // const state = await NetInfo.fetch();
+      // return state.isInternetReachable;     
+      return true;
     }
 
     async function sendTester(){
@@ -100,7 +101,7 @@ export default function Index() {
         }
 
         //Database Conn Error
-        const {error} = await supabase.from("Email_Signups").insert([{email_address: tester}]).select();        
+        const {error} = false//await supabase.from("Email_Signups").insert([{email_address: tester}]).select();        
         
         if(error){
           throw error;
